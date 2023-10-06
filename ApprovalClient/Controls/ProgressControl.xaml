@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ApprovalClient.Controls.ProgressControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ApprovalClient.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="400">
+    <UserControl.Resources>
+        <BitmapImage x:Key="LoadingImageSource" UriSource="/Media/loading.gif" />
+    </UserControl.Resources>    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border BorderThickness="0 0 0 1" BorderBrush="Gray">
+            <StackPanel x:Name="pnlPaymentHeader" Margin="20">
+                <TextBlock Text="Easy and safe account payments" Foreground="Green" FontSize="16" Margin="0 10 0 0"/>
+            </StackPanel>
+        </Border>
+
+        <Grid x:Name="grdPaymentDetails" Grid.Row="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="txtMessage" Grid.Row="2" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" Text="Progress message"></TextBlock>
+            <Image Source="{StaticResource LoadingImageSource}" VerticalAlignment="Top" Grid.Row="3" Height="150" />
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="ApprovalClient.Controls.ApproveControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ApprovalClient.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border BorderThickness="0 0 0 1" BorderBrush="Gray">
+            <StackPanel x:Name="pnlPaymentHeader" Margin="20">
+                <TextBlock Text="Easy and safe account payments" Foreground="Green" FontSize="16" Margin="0 10 0 0"/>
+            </StackPanel>
+        </Border>
+
+        <Grid x:Name="grdPaymentDetails" Grid.Row="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="txtPayment1" FontSize="16" Text="Payment authorization requested for "></TextBlock>
+            <TextBlock x:Name="txtMerchant" Grid.Row="2" FontSize="26" FontWeight="Bold" Text="MERCHANT"></TextBlock>
+            <TextBlock x:Name="txtPayment2" Grid.Row="4" FontSize="16" Text="With amount"></TextBlock>
+            <TextBlock x:Name="txtAmount" Grid.Row="6" FontSize="26" FontWeight="Bold" Text="999 EUR"></TextBlock>
+            <TextBlock x:Name="txtPayment3" Grid.Row="8" FontSize="16" Text="From user"></TextBlock>
+            <TextBlock x:Name="txtUser" Grid.Row="10" FontSize="26" FontWeight="Bold" Text="Test user"></TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnApprove" Margin="10" Height="40" Width="170" FontSize="18" FontWeight="Bold" Click="btnApprove_Click">Approve payment</Button>
+            <Button x:Name="btnReject" Grid.Column="1" Margin="10" Height="40" Width="170" FontSize="18" FontWeight="Bold" Click="btnReject_Click">Reject payment</Button>
+        </Grid>
+    </Grid>
+</UserControl>

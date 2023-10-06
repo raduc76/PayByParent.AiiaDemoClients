@@ -1,0 +1,16 @@
+﻿<Window xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"  x:Class="PaymentClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaymentClient"
+        xmlns:controls="clr-namespace:PaymentClient.Controls"
+        mc:Ignorable="d"
+        Title="Merchant app v1.0" Height="900" Width="400" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid x:Name="grdMain">
+        <controls:PaymentSummaryControl x:Name="paymentSummaryControl" Visibility="Collapsed"></controls:PaymentSummaryControl>
+        <controls:WaitPaymentControl x:Name="waitPaymentControl" Visibility="Collapsed"></controls:WaitPaymentControl>
+        <controls:RejectedControl x:Name="rejectedControl" Visibility="Collapsed"></controls:RejectedControl>
+        <controls:PaymentAuthorizedControl x:Name="paymentAuthorizedControl" Visibility="Collapsed"></controls:PaymentAuthorizedControl>
+    </Grid>
+</Window>

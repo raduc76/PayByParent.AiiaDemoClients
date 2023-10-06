@@ -1,0 +1,17 @@
+﻿<Window x:Class="ApprovalClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApprovalClient"
+        xmlns:controls="clr-namespace:ApprovalClient.Controls"
+        mc:Ignorable="d"
+        Title="Parent app v1.0" Height="900" Width="400" Loaded="Window_Loaded">
+    <Grid x:Name="grdMain">
+        <controls:WebControl x:Name="webControl"></controls:WebControl>
+        <controls:WelcomeControl x:Name="welcomeControl"></controls:WelcomeControl>
+        <controls:ApproveControl x:Name="approveControl" Visibility="Collapsed"></controls:ApproveControl>
+        <controls:AccountSelectionControl x:Name="accountSelectionControl" Visibility="Collapsed"></controls:AccountSelectionControl>
+        <controls:ProgressControl x:Name="progressControl" Visibility="Collapsed"></controls:ProgressControl>
+    </Grid>
+</Window>
